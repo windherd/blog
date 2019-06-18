@@ -1,240 +1,305 @@
 <html>
-  <head>
-  <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>life | 风中追风</title>
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560853962671">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    life | 风中追风
+</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560854231205">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://windherd.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://windherd.github.io/">
-  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560853962671" alt="">
-  </a>
-  <h1 class="site-title">
-    风中追风
-  </h1>
-  <p class="site-description">
-    Maintain curiosity, to maintain pure heart.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/windherd" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://windherd.github.io/">
+                <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560854231205" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    风中追风
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：#life
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/你有什么道理后悔没有早点知道">
-        <h2 class="post-title">你有什么道理后悔没有早点知道</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-07-11 ·
-        </time>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        life</b>
+    </div>
+    
         
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/你有什么道理后悔没有早点知道" class="post-feature-image" style="background-image: url('http://ww2.sinaimg.cn/large/006tNc79gy1g45greu5nfj31hc0u0wle.jpg')">
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/你有什么道理后悔没有早点知道">
+                        你有什么道理后悔没有早点知道
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-07-11</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-banana">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/你有什么道理后悔没有早点知道" class="post-feature-image" style="background-image:url(http://ww2.sinaimg.cn/large/006tNc79gy1g45greu5nfj31hc0u0wle.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
 <ul>
 <li>第一个道理其实是悖论，就是无论我告诉你什么道理，当你的心智没有达到这个境界或接近的水平时或经
 过一些事情的时候，你是不会理解这个道理的。或者你以为你知道这个道理，其实你不知道。</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/baby">
-        <h2 class="post-title">baby</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-08-17 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/baby" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/baby.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/你有什么道理后悔没有早点知道">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/baby">
+                        baby
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-08-17</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-other_2">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/baby" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/baby.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>Since I left you, I have been constantly depressed. My happiness is to be near you. Incessantly I live over in my memory your caresses, your tears, your affectionate solicitude. The charms of the incomparable Josephine kindle continually a burning and a glowing flame in my heart. When, free from all solicitude, all harassing care, shall I be able to pass all my time with you, having only to love you, and to think only of the happiness of so saying, and of proving it to you?</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/missthedistance">
-        <h2 class="post-title">向温暖的地方靠近</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-06-01 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/missthedistance" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/missthedistance.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/baby">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/missthedistance">
+                        向温暖的地方靠近
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-06-01</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <ul>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/missthedistance" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/missthedistance.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <ul>
 <li>花期以至</li>
 <li>朝露未晞</li>
 <li>不如你好看的样子</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/JustMetYou">
-        <h2 class="post-title">刚好遇见你</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-03-24 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/JustMetYou" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/JustMetYou.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/missthedistance">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/JustMetYou">
+                        刚好遇见你
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-03-24</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-banana">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <ul>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/JustMetYou" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/JustMetYou.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <ul>
 <li>当遇见你时，</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/seeyou">
-        <h2 class="post-title">想见</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-03-24 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/seeyou" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/seeyou.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/JustMetYou">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/seeyou">
+                        想见
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-03-24</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-info">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/seeyou" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/seeyou.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>你,一会儿看我,一会儿看云;我觉得,你看我时很远,看云时很近</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/sweetSorrow">
-        <h2 class="post-title">甜蜜的忧愁</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-25 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/sweetSorrow" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/sweetSorrow.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/seeyou">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/sweetSorrow">
+                        甜蜜的忧愁
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-25</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-other_2">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <h3 id="温愁">温&amp;愁</h3>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/sweetSorrow" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/sweetSorrow.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h3 id="温愁">温&amp;愁</h3>
 <ul>
 <li>最是那一低头的温柔</li>
 <li>像一朵水莲花不胜凉风的娇羞</li>
@@ -242,82 +307,106 @@
 <li>那思念里有甜蜜的忧愁</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/missyou">
-        <h2 class="post-title">轻盈的梦</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-14 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/missyou" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/missyou.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/sweetSorrow">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/missyou">
+                        轻盈的梦
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-14</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-other_4">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/missyou" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/missyou.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>十二月的冷风，吹放一朵朵梅花，绯红娇嫩的瓣，像极了你的脸</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/warmday">
-        <h2 class="post-title">今天,阳光真好!</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-13 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/warmday" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/warmday.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/missyou">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/warmday">
+                        今天,阳光真好!
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-13</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-primary">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/warmday" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/warmday.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>只有经历过痛苦才懂得快乐,只有经历过失去才懂得珍惜,我可能是个矫情的人,我可能写了篇假诗......</p>
 </blockquote>
 <p><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcp1dv853vj308c057t8o.jpg" alt=""></p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/wind">
-        <h2 class="post-title">はさき</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-30 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/wind" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/wind.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/warmday">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/wind">
+                        はさき
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-30</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-other_4">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/wind" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/wind.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>海风带不走思念,带不走时光</p>
 </blockquote>
 <ul>
@@ -325,45 +414,97 @@
 <li>因为你根本就不是诗人</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/girl">
-        <h2 class="post-title">姑娘,等一下</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-16 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/girl" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/girl.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/wind">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/girl">
+                        姑娘,等一下
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-16</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-success">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/girl" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/girl.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>抽着中南海,披着风衣,眼睛里充满着故事,请叫我风一样的男人......</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-</div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/girl">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+                
+                    <a href="https://windherd.github.io//tag/life//page/2/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
 
-        <div class="pagination-container">
-  
-  
-    <a href="https://windherd.github.io//tag/life//page/2/" class="prev-page">下一页</a>
-  
-</div>
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://windherd.github.io//images/avatar.png?v=1560854231205)">
+        </div>
+        <h1 class="id_card-title">
+            风中追风
+        </h1>
+        <h2 class="id_card-description">
+            Maintain curiosity, to maintain pure heart.
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
 
-        <div class="site-footer">
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
   Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
   <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
 </div>
@@ -372,7 +513,13 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>

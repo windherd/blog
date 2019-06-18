@@ -1,101 +1,127 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>10分钟系列之css | 风中追风</title>
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560853962671">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    10分钟系列之css | 风中追风
+</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560854231205">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://windherd.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
 
-  </head>
-  <body>
+                    
+                            
+</head>
+
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://windherd.github.io/">
-  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560853962671" alt="">
-  </a>
-  <h1 class="site-title">
-    风中追风
-  </h1>
-  <p class="site-description">
-    Maintain curiosity, to maintain pure heart.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/windherd" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://windherd.github.io/">
+                <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560854231205" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    风中追风
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              10分钟系列之css
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2018-07-13 ·
-              </time>
-              
-                <a href="https://windherd.github.io//tag/code" class="post-tag">
-                  # code
-                </a>
-              
-            </div>
-            
-              <div class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/10分钟系列之css.jpg')">
-              </div>
-            
-            <div class="post-content">
-              <h1 id="一-css简介">一. CSS简介</h1>
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            10分钟系列之css
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2018-07-13</time>
+                            
+                                <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-primary">
+                            #code
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/10分钟系列之css.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h1 id="一-css简介">一. CSS简介</h1>
 <ul>
 <li>CSS 指层叠样式表 (Cascading Style Sheets)</li>
 <li>样式定义如何显示 HTML 元素,更好的修饰html</li>
@@ -202,50 +228,77 @@
 </li>
 </ul>
 
-            </div>
-          </article>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://windherd.github.io//post/10分钟系列之html">
+                                <h3 class="post-title">
+                                    10分钟系列之html
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80-css%E7%AE%80%E4%BB%8B">一. CSS简介</a></li>
+<li><a href="#%E4%BA%8C-css%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">二. CSS基础语法</a></li>
+<li><a href="#%E4%B8%89css%E9%80%89%E6%8B%A9%E5%99%A8">三.CSS选择器</a></li>
+<li><a href="#%E5%9B%9Bcsss%E4%B8%8Ehtml%E7%9A%84%E7%BB%93%E5%90%88%E6%96%B9%E5%BC%8F">四.CSSS与HTML的结合方式</a></li>
+<li><a href="#%E4%BA%94-css%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80">五. CSS常用布局</a></li>
+</ul>
+
         </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://windherd.github.io//post/10分钟系列之html">
-              <h3 class="post-title">
-                10分钟系列之html
-              </h3>
-            </a>
-          </div>
-        
+                </div>
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-<div id="gitalk-container"></div>
 
-<script>
 
-  var gitalk = new Gitalk({
-    clientID: 'c3a23f028ffa157f67f9',
-    clientSecret: 'd9b1f603641c849e309d3273da20035201edbb32',
-    repo: 'windherd.github.io',
-    owner: 'windherd',
-    admin: ['windherd'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+            </div>
 
-  gitalk.render('gitalk-container')
 
-</script>
-
-          
-
-          
-        
-
-        <div class="site-footer">
+            <div class="site-footer">
   Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
   <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
 </div>
@@ -254,7 +307,35 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
+
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'c3a23f028ffa157f67f9',
+            clientSecret: 'd9b1f603641c849e309d3273da20035201edbb32',
+            repo: 'windherd.github.io',
+            owner: 'windherd',
+            admin: ['windherd'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
 </html>

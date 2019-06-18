@@ -1,102 +1,126 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>风中追风</title>
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560853962671">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    风中追风
+</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560854231205">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://windherd.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://windherd.github.io/">
-  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560853962671" alt="">
-  </a>
-  <h1 class="site-title">
-    风中追风
-  </h1>
-  <p class="site-description">
-    Maintain curiosity, to maintain pure heart.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/windherd" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://windherd.github.io/">
+                <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560854231205" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    风中追风
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/firstblog">
-        <h2 class="post-title">我的第一篇博客</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2016-09-19 ·
-        </time>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
         
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/firstblog" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/firstblog.jpg')">
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/firstblog">
+                        我的第一篇博客
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2016-09-19</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-primary">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <h2 id="x宝的其妙之旅">X宝的其妙之旅</h2>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/firstblog" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/firstblog.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h2 id="x宝的其妙之旅">X宝的其妙之旅</h2>
 <blockquote>
 <p>突然有个机会学习了怎么搭建博客.激动地一笔.如果你也想像我一样帅,<a href="http://www.jianshu.com/p/1656489eff01">我也拦不住你!</a></p>
 <p>技术笔记,和项目遇到的问题终于有地方装逼了,哦yeah(*╯3╰))!</p>
@@ -104,21 +128,63 @@
 <p>今天写一个面试经历,希望不会被老大看到.let's go!</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-</div>
-
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/firstblog">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://windherd.github.io//page/2/" class="page-btn btn">上一页</a>
+            
+                
+    </div>
     
-        <div class="pagination-container">
-  
-    <a href="https://windherd.github.io//page/2/" class="prev-page">上一页</a>
-  
-  
-</div>
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
 
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://windherd.github.io//images/avatar.png?v=1560854231205)">
+        </div>
+        <h1 class="id_card-title">
+            风中追风
+        </h1>
+        <h2 class="id_card-description">
+            Maintain curiosity, to maintain pure heart.
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
     
-        <div class="site-footer">
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
   Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
   <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
 </div>
@@ -127,7 +193,13 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>

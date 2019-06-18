@@ -1,131 +1,164 @@
 <html>
-  <head>
-  <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>code | 风中追风</title>
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560853962671">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    code | 风中追风
+</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560854231205">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://windherd.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://windherd.github.io/">
-  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560853962671" alt="">
-  </a>
-  <h1 class="site-title">
-    风中追风
-  </h1>
-  <p class="site-description">
-    Maintain curiosity, to maintain pure heart.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/windherd" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://windherd.github.io/">
+                <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560854231205" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    风中追风
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：#code
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/广告名词解释">
-        <h2 class="post-title">广告名词解释</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-11-13 ·
-        </time>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        code</b>
+    </div>
+    
         
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/广告名词解释" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/广告名词解释.jpg')">
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/广告名词解释">
+                        广告名词解释
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-11-13</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-success">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        <h3 id="1-基本名词"><strong>1. 基本名词</strong></h3>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/广告名词解释" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/广告名词解释.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h3 id="1-基本名词"><strong>1. 基本名词</strong></h3>
 <p><strong>CTR（Click Through Rate）</strong>：点击率，衡量线上广告效果的重要因素，等于广告点击数量与广告展现数量的比率，CTR越高，即点击广告的比率越高，广告效果越好。</p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/10分钟系列之css">
-        <h2 class="post-title">10分钟系列之css</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-07-13 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/10分钟系列之css" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/10分钟系列之css.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/广告名词解释">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/10分钟系列之css">
+                        10分钟系列之css
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-07-13</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-warning">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        <h1 id="一-css简介">一. CSS简介</h1>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/10分钟系列之css" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/10分钟系列之css.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h1 id="一-css简介">一. CSS简介</h1>
 <ul>
 <li>CSS 指层叠样式表 (Cascading Style Sheets)</li>
 <li>样式定义如何显示 HTML 元素,更好的修饰html</li>
@@ -133,89 +166,158 @@
 <li>了解决内容与表现分离的问题</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/10分钟系列之html">
-        <h2 class="post-title">10分钟系列之html</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-07-12 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/10分钟系列之html" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/10分钟系列之html.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/10分钟系列之css">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/10分钟系列之html">
+                        10分钟系列之html
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-07-12</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-warning">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/proxy">
-        <h2 class="post-title">代理设置</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-07 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/proxy" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/proxy.jpg')">
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/10分钟系列之html" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/10分钟系列之html.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/10分钟系列之html">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/proxy">
+                        代理设置
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-07</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-other_2">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/gitcommandline">
-        <h2 class="post-title">git常用操作</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-19 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/gitcommandline" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/gitcommandline.jpg')">
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/proxy" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/proxy.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            
+安装Charles,SwitchHosts两个软件
+在SwitchHosts把指定api修改成测试环境的host,并开启
+模拟器或者手机连接wifi设置代理为本机电脑的ip,端口8888
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/proxy">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/gitcommandline">
+                        git常用操作
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-19</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-other_3">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/gitcommandline" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/gitcommandline.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>记录一些git常用操作</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-</div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/gitcommandline">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
 
-        <div class="pagination-container">
-  
-  
-</div>
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://windherd.github.io//images/avatar.png?v=1560854231205)">
+        </div>
+        <h1 class="id_card-title">
+            风中追风
+        </h1>
+        <h2 class="id_card-description">
+            Maintain curiosity, to maintain pure heart.
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
 
-        <div class="site-footer">
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
   Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
   <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
 </div>
@@ -224,7 +326,13 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>

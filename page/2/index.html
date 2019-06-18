@@ -1,102 +1,126 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>风中追风</title>
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560853962671">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    风中追风
+</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560854231205">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://windherd.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://windherd.github.io/">
-  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560853962671" alt="">
-  </a>
-  <h1 class="site-title">
-    风中追风
-  </h1>
-  <p class="site-description">
-    Maintain curiosity, to maintain pure heart.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/windherd" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://windherd.github.io/">
+                <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560854231205" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    风中追风
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/sweetSorrow">
-        <h2 class="post-title">甜蜜的忧愁</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-25 ·
-        </time>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
         
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/sweetSorrow" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/sweetSorrow.jpg')">
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/sweetSorrow">
+                        甜蜜的忧愁
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-25</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-other_1">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <h3 id="温愁">温&amp;愁</h3>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/sweetSorrow" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/sweetSorrow.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <h3 id="温愁">温&amp;愁</h3>
 <ul>
 <li>最是那一低头的温柔</li>
 <li>像一朵水莲花不胜凉风的娇羞</li>
@@ -104,128 +128,291 @@
 <li>那思念里有甜蜜的忧愁</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/toued">
-        <h2 class="post-title">Android尺寸怎么标</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-15 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/android" class="post-tag">
-            # Android
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/toued" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/toued.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/sweetSorrow">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/toued">
+                        Android尺寸怎么标
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-15</time>
+                    
+                        <a href="https://windherd.github.io//tag/android" class="post-tag i-tag
+                            i-tag-other_1">
+            #Android
         </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/missyou">
-        <h2 class="post-title">轻盈的梦</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-14 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/missyou" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/missyou.jpg')">
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/toued" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/toued.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            基本概念
+
+
+神奇的dp/sp:如果屏幕密度为160，这时dp和sp和px是一 样的。1dp=1sp=1px，但如果使用px作单位，如果屏幕大小不变（假设还是3.2寸），而屏幕密度变成了320。那么原来TextView的宽度 设成160px，在密度为320的3.2寸屏幕里看要比在密度为160的3.2寸屏幕上看短了一半。但如果设置成160dp或160sp的话。系统会自动 将width属性值设置成320px的。也就是160 * 320 / 160。其中320 / 160可称为密度比例因子。也就是说，如果使用dp和sp，系统会根据屏幕密度的变化自动进行转换。
+
+
+
+分辨率：屏幕上显示的像素个数，单位尺寸内像素点越多，显示的图像就越清楚
+主流分辨率:480*800、720*1280、1080*1920
+
+
+像素密度(每英寸多少个像素点)
+240dpi(480*800,h)、320dpi(720*1280,xh)、480dpi(1080*1920,xxh)
+
+
+drawable-ldpi 底密度,通常是指120
+
+
+drawable-mdpi 中等密度,通常是指160
+
+
+drawable-hdpi高密度,通常是指240
+
+
+drawable-xhdpi 超高密度,通常是指320
+
+
+drawable-xxhdpi超超高密度,通常是指480
+密度比例因子:density =  densityDpi /160
+像素:px = dip*density
+
+
+
+
+单位​
+px:像素
+dp:设备独立像素(160dpi为标准)
+240dpi下，1dp=1.5px
+320dpi下，1dp=2px
+480dpi下，1dp=3px
+
+sp:等同于dp，用于描述字体大小
+240dpi下，1sp=1.5px    
+320dpi下，1sp=2px
+480dpi下，1sp=3px
+
+
+
+
+dp是与密度无关，sp除了与密度无关外，还与scale无关
+
+常见分辨率
+
+4:3
+VGA 640*480
+QVGA 320*240
+HVGA 480*320
+SVGA 800*600
+5:3
+WVGA 800*480
+16:9
+FWVGA 854*480
+HD 1920*1080
+QHD 960*540
+720p 1280*720
+1080p 1920*1080
+Apple
+iPhone4/4s 960*640
+iPhone5/5s 1136*640
+iPhone6 1334*750
+iPhone6Plus 1920*1080
+小米1 854*480
+小米2 1280*720
+红米1/1s/note 1280*720
+
+对应的DPI
+
+
+HVGA mdpi
+
+
+WVGA hdpi
+
+
+FWVGA hdpi
+
+
+QHD hdpi
+
+
+720p xhdpi
+
+
+1080p xxhdpi
+最佳方案
+
+
+
+选取320dpi下(720*1280)进行设计，此分辨率下1dp=2px
+对于一切切图资源特殊处理
+输出多套分辨率的切图，例如480p和720p，在设计的时候要注意好切图区域的大小能被2和1.5整除的大小，如48p*48px、96*96px等。
+使用相对于单位进行标注
+
+采用自适应布局
+标注尽量采用相对关系
+
+文字
+中文字体：默认为Droid Sans Fallback,设计时可采用微软雅黑。
+英文字体：Andriod4.x及以上采用Roboto，Andrio2.x和andriod3.x采用 Droid Sans。建议尽量采用系统默认字体。
+Andriod规范建议，字号采用12sp、14sp、18sp、22sp等四个级别来设计。（实际设计时可以按实际情况调整）
+总结
+
+采用720*1280分辨率来进行设计。（设计时，采用偶数值进行设计，方便dp和px的转换）
+开始标注了，标注尽量采用相对位置进行标注。
+切图了，在720*1280下进行切图，可以完全适配720*1280后放大缩小切图资源
+分别适配480*800、1080*1920
+测试（UI）
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/toued">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/missyou">
+                        轻盈的梦
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-14</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-error">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/missyou" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/missyou.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>十二月的冷风，吹放一朵朵梅花，绯红娇嫩的瓣，像极了你的脸</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/warmday">
-        <h2 class="post-title">今天,阳光真好!</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-13 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/warmday" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/warmday.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/missyou">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/warmday">
+                        今天,阳光真好!
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-13</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-primary">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/warmday" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/warmday.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>只有经历过痛苦才懂得快乐,只有经历过失去才懂得珍惜,我可能是个矫情的人,我可能写了篇假诗......</p>
 </blockquote>
 <p><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcp1dv853vj308c057t8o.jpg" alt=""></p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/proxy">
-        <h2 class="post-title">代理设置</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-02-07 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/proxy" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/proxy.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/warmday">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/proxy">
+                        代理设置
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-02-07</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-other_4">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/wind">
-        <h2 class="post-title">はさき</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-30 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/wind" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/wind.jpg')">
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/proxy" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/proxy.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            
+安装Charles,SwitchHosts两个软件
+在SwitchHosts把指定api修改成测试环境的host,并开启
+模拟器或者手机连接wifi设置代理为本机电脑的ip,端口8888
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/proxy">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/wind">
+                        はさき
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-30</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/wind" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/wind.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>海风带不走思念,带不走时光</p>
 </blockquote>
 <ul>
@@ -233,127 +420,201 @@
 <li>因为你根本就不是诗人</li>
 </ul>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/DynamicView">
-        <h2 class="post-title">Android动态布局实现思路</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-22 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/android" class="post-tag">
-            # Android
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/DynamicView" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/DynamicView.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/wind">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/DynamicView">
+                        Android动态布局实现思路
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-22</time>
+                    
+                        <a href="https://windherd.github.io//tag/android" class="post-tag i-tag
+                            i-tag-warning">
+            #Android
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/DynamicView" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/DynamicView.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>提供一种简单实现动态布局的思路,即每次布局页面发生变化,前端不用更新版本,让后端来控制布局的展示效果</p>
 <p>大概1周的时间,终于完成了思路设计到Demo的实现</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/annotation">
-        <h2 class="post-title">注解</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-19 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/android" class="post-tag">
-            # Android
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/annotation" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/annotation.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/DynamicView">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/annotation">
+                        注解
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-19</time>
+                    
+                        <a href="https://windherd.github.io//tag/android" class="post-tag i-tag
+                            i-tag-info">
+            #Android
         </a>
-      
-      <div class="post-abstract">
-        <p>1.使用IntDef代替枚举</p>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/annotation" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/annotation.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>1.使用IntDef代替枚举</p>
 <p>枚举一直不被Android中推荐使用.因为枚举中的每一个值在枚举类中都是一个对象.使用枚举值会比整型消耗的更多的内存.但有时我们又要限制取某些特定的值.intDef和StringDef两个魔术变量注解来替换枚举.厉害了,我的哥.</p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/gitcommandline">
-        <h2 class="post-title">git常用操作</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-19 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/code" class="post-tag">
-            # code
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/gitcommandline" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/gitcommandline.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/annotation">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/gitcommandline">
+                        git常用操作
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-19</time>
+                    
+                        <a href="https://windherd.github.io//tag/code" class="post-tag i-tag
+                            i-tag-other_1">
+            #code
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/gitcommandline" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/gitcommandline.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>记录一些git常用操作</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://windherd.github.io//post/girl">
-        <h2 class="post-title">姑娘,等一下</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-01-16 ·
-        </time>
-        
-          <a href="https://windherd.github.io//tag/life" class="post-tag">
-            # life
-          </a>
-        
-      </div>
-      
-        <a href="https://windherd.github.io//post/girl" class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/girl.jpg')">
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/gitcommandline">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://windherd.github.io//post/girl">
+                        姑娘,等一下
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2017-01-16</time>
+                    
+                        <a href="https://windherd.github.io//tag/life" class="post-tag i-tag
+                            i-tag-warning">
+            #life
         </a>
-      
-      <div class="post-abstract">
-        <blockquote>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://windherd.github.io//post/girl" class="post-feature-image" style="background-image:url(https://windherd.github.io//post-images/girl.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p>抽着中南海,披着风衣,眼睛里充满着故事,请叫我风一样的男人......</p>
 </blockquote>
 
-      </di>
-    </article>
-  
-</div>
-
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://windherd.github.io//post/girl">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://windherd.github.io//" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://windherd.github.io//page/3/" class="page-btn btn">下一页</a>
+                    
+    </div>
     
-        <div class="pagination-container">
-  
-    <a href="https://windherd.github.io//" class="prev-page">上一页</a>
-  
-  
-    <a href="https://windherd.github.io//page/3/" class="prev-page">下一页</a>
-  
-</div>
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
 
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://windherd.github.io//images/avatar.png?v=1560854231205)">
+        </div>
+        <h1 class="id_card-title">
+            风中追风
+        </h1>
+        <h2 class="id_card-description">
+            Maintain curiosity, to maintain pure heart.
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
     
-        <div class="site-footer">
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
   Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
   <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
 </div>
@@ -362,7 +623,13 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>
