@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://windherd.github.io/</id>
     <title>风中追风</title>
-    <updated>2019-06-18T09:28:36.037Z</updated>
+    <updated>2019-06-18T09:40:51.593Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://windherd.github.io/"/>
     <link rel="self" href="https://windherd.github.io//atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://windherd.github.io//images/avatar.png</logo>
     <icon>https://windherd.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 风中追风</rights>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://windherd.github.io//post/about</id>
-        <link href="https://windherd.github.io//post/about">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>阳光沙滩仙人掌, 还有我的素梅酱</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[广告名词解释]]></title>
         <id>https://windherd.github.io//post/广告名词解释</id>
@@ -963,6 +954,32 @@ fun main(args: Array&lt;String&gt;) {
 <li>
 <p>和你在一起生活才有意义</p>
 </li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[想见]]></title>
+        <id>https://windherd.github.io//post/seeyou</id>
+        <link href="https://windherd.github.io//post/seeyou">
+        </link>
+        <updated>2017-03-24T10:23:53.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>你,一会儿看我,一会儿看云;我觉得,你看我时很远,看云时很近</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>你,一会儿看我,一会儿看云;我觉得,你看我时很远,看云时很近</p>
+</blockquote>
+<!--more-->
+<ul>
+<li>想见,却不能见</li>
+<li>封存的记忆,烫伤了自己</li>
+<li>想见,却不敢见,</li>
+<li>将来的眼泪,模糊了视线</li>
+<li>想见,却见不到</li>
+<li>未知的距离,冻结了时间</li>
+<li>想见,相见,再见</li>
+<li>再见,想见,相见...</li>
 </ul>
 ]]></content>
     </entry>
