@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 风中追风</title>
+<title>AndroidStudio使用问题 | 风中追风</title>
 <link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560848357169">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -78,22 +78,65 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              AndroidStudio使用问题
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2018-07-18 ·
               </time>
+              
+                <a href="https://windherd.github.io//tag/android" class="post-tag">
+                  # Android
+                </a>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <ul>
+<li>不能构造apk</li>
+</ul>
+<!-- more -->
+<blockquote>
+<ol>
+<li>File -&gt; Invalidate Caches -&gt; Invalidate.</li>
+<li>File -&gt; Close Project.</li>
+<li>Remove the project from the AS project selector window.</li>
+<li>Quit from Android Studio</li>
+<li>Start AS and open project again</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p>R文件爆红.</p>
+<ol>
+<li>
+<p>检查布局文件是否有报错</p>
+</li>
+<li>
+<p>如果你的项目比较大</p>
+<pre><code>1. Help -&gt; Edit Custome Properties
+
+2. idea.max.intellisense.filesize=99999
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://windherd.github.io//post/10分钟系列之css">
+              <h3 class="post-title">
+                10分钟系列之css
+              </h3>
+            </a>
+          </div>
         
 
         

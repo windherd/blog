@@ -1,0 +1,462 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Android动态布局实现思路 | 风中追风</title>
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560848357169">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://windherd.github.io/">
+  <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560848357169" alt="">
+  </a>
+  <h1 class="site-title">
+    风中追风
+  </h1>
+  <p class="site-description">
+    Maintain curiosity, to maintain pure heart.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/windherd" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Android动态布局实现思路
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2017-01-22 ·
+              </time>
+              
+                <a href="https://windherd.github.io//tag/android" class="post-tag">
+                  # Android
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <blockquote>
+<p>提供一种简单实现动态布局的思路,即每次布局页面发生变化,前端不用更新版本,让后端来控制布局的展示效果</p>
+<p>大概1周的时间,终于完成了思路设计到Demo的实现</p>
+</blockquote>
+<!--more-->
+<h3 id="什么是动态布局">什么是动态布局</h3>
+<ul>
+<li>我们经常的做法是每次产品有新的需求,我们都要根据新的页面样式
+<ol>
+<li>画布局</li>
+<li>解析后端数据为model</li>
+<li>找到每个控件</li>
+<li>分别设置值.</li>
+</ol>
+</li>
+<li>而动态布局,就是前端不固定布局样式,根据后端下发的数据映射成本地控件.再根据后端数据进行展示.有点抽象,脑壳疼+_+~~大胸弟,莫要慌,抱紧我!</li>
+</ul>
+<h3 id="为什么要做动态布局">为什么要做动态布局</h3>
+<ul>
+<li>没有压迫就没有战争,没有需求就没有innovation.每次的需求都是跟具体业务嘻嘻相关的.为了让移动app能适应广告投放素材的多样性, 并在投放过程中减少人力的介入 ,实现告展示视图的高效,自适应页面动态布局</li>
+<li>业务需求是这样的,以banner页面,和瀑布流布局为例.我们要投放广告,而广告的来源与页面设计是根据广告商的需求来定制的.不同的广告商对于不同广告的页面设计需求是不同的.而对于大流量的app而言,一个广告可能就只是展示一天,几天,甚至几个小时.假如一个小时换一个广告,我们前端是不可能每小时更新一个版本的,Android还好一点,对于iOS来讲,appstore审核就要一到两周.如果真的这样发版本了.用户:你tm确定这不是在逗我?因此,对于这种需求,动态布局势在必行!</li>
+</ul>
+<h3 id="实现动态布局的思路">实现动态布局的思路</h3>
+<ul>
+<li>前面说了一大堆废话.你可能看了篇假博客?</li>
+<li>动态布局主要是要确定一下三点:
+<ol>
+<li>布局大小</li>
+<li>布局位置</li>
+<li>控件类型</li>
+</ol>
+</li>
+<li>当然还有一下小的注意点,比如margin,图片圆角,点击事件等等,当然本文并实现这些,这都是小问题,不是吗?可能也不是,对于我若是的话,我这一篇不写完了吗?菜鸡啊~</li>
+<li>思路(根据后端下发的json数据按比例和做本地映射展示出布局)
+<ol>
+<li>先把我们动态布局的容器即我们想在那一块动态展示布局的区域,比如banner位置的长宽分成若干等分</li>
+<li>让后端api数据中返回我们需要的1.长宽,2起始坐标,3控件类型(我们Android&amp;iOS做本地映射成我们自身的控件类型).4总的长宽各分了多少份</li>
+<li>上面说的长宽,起始左边,和总的长宽都是一个相对值.后边会有细说呢</li>
+</ol>
+</li>
+</ul>
+<h3 id="文档">文档</h3>
+<ol>
+<li>json数据格式定义</li>
+</ol>
+<pre><code class="language-java">   {
+       &quot;data&quot;: {
+           &quot;cols&quot;: &quot;4&quot;,
+           &quot;rows&quot;: &quot;4&quot;,
+           &quot;views&quot;: [
+               {
+                   &quot;type&quot;: &quot;text&quot;,
+                   &quot;value&quot;: &quot;这是一个TextView&quot;,
+                   &quot;width&quot;: &quot;4&quot;,
+                   &quot;height&quot;: &quot;1&quot;,
+                   &quot;x&quot;: &quot;0&quot;,
+                   &quot;y&quot;: &quot;3&quot;,
+                   &quot;font&quot;: &quot;17&quot;,
+                   &quot;other&quot;: &quot;其他&quot;//比如一些margin,是否可点击,背景等等.是一些待定字段
+               },
+               {
+                   &quot;type&quot;: &quot;image&quot;,
+                   &quot;value&quot;: &quot;URL&quot;,
+                   &quot;width&quot;: &quot;4&quot;,
+                   &quot;height&quot;: &quot;3&quot;,
+                   &quot;x&quot;: &quot;0&quot;,
+                   &quot;y&quot;: &quot;0&quot;,
+                   &quot;other&quot;: &quot;其他&quot;//比如一些margin,是否可点击,背景等等.是一些待定字段
+               }
+           ]
+       }
+   }
+</code></pre>
+<ol start="2">
+<li>
+<p>通过cols/rows对广告容器视图进行等分.简单坐标系如下</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgy1fbz7p97uq7j30vc0eg0ty.jpg" alt=""></p>
+</li>
+<li>
+<p>子视图的类型定义</p>
+<p>目前的type:</p>
+<pre><code class="language-java">{
+    &quot;text&quot;  : TextView,
+    &quot;image&quot; : Imageview,
+    &quot;gif&quot;   : gif图片,
+    &quot;video&quot; : 视频view
+}
+</code></pre>
+</li>
+<li>
+<p>根据x/y/width/height四个字段来确定投放子视图在第一步中划分的左边系中的位置和大小</p>
+<ul>
+<li>
+<p>依照示例数据得到如下布局:</p>
+<ul>
+<li>图片view左上角点坐标:(0, 0), 宽高: (4, 3)</li>
+<li>文本view左上角点坐标:(0, 3), 宽高: (4, 1)</li>
+</ul>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgy1fbz7v6mttaj30iw08r74n.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li>
+<p>根据&quot;type&quot;映射成本第相应控件,根据&quot;value&quot;给相应的控件设置内容</p>
+</li>
+<li>
+<p>再举个具体例子</p>
+<ul>
+<li>
+<p>有如下布局</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tKfTcgy1fbz7z81muxj30nw0jnn1n.jpg" alt=""></p>
+</li>
+<li>
+<p>后端投放比例如下:</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcgy1fbz824zmucj30h906y75h.jpg" alt=""></p>
+</li>
+<li>
+<p>坐标:</p>
+<ul>
+<li>文本view左上角点坐标:(0, 0), 宽高: (2, 1)</li>
+<li>左边图片view左上角点坐标:(0, 1), 宽高: (1, 4)</li>
+<li>右边图片view左上角点坐标:(1, 1), 宽高: (1, 4)</li>
+</ul>
+</li>
+<li>
+<p>json:</p>
+<pre><code class="language-java">{
+    &quot;data&quot; : {
+        &quot;cols&quot; : &quot;2&quot;,
+        &quot;rows&quot; : &quot;5&quot;,
+        &quot;views&quot; : [
+            {
+                &quot;type&quot; : &quot;text&quot;,
+                &quot;value&quot; : &quot;【烈火屠龙】3P顶级BOSS 猛爆绝品装备&quot;,
+                &quot;width&quot; : &quot;2&quot;,
+                &quot;height&quot; : &quot;1&quot;,
+                &quot;x&quot; : &quot;0&quot;,
+                &quot;y&quot; : &quot;0&quot;,
+                &quot;other&quot; : &quot;其他&quot;
+            }, {
+                &quot;type&quot; : &quot;image&quot;,
+                &quot;value&quot; : &quot;URL1&quot;, // 图片URL
+                &quot;width&quot; : &quot;1&quot;,
+                &quot;height&quot; : &quot;4&quot;,
+                &quot;x&quot; : &quot;0&quot;,
+                &quot;y&quot; : &quot;1&quot;,
+                &quot;other&quot; : &quot;其他&quot;
+            }, {
+                &quot;type&quot; : &quot;image&quot;,
+                &quot;value&quot; : &quot;URL2&quot;, // 图片URL
+                &quot;width&quot; : &quot;1&quot;,
+                &quot;height&quot; : &quot;4&quot;,
+                &quot;x&quot; : &quot;1&quot;,
+                &quot;y&quot; : &quot;1&quot;,
+                &quot;other&quot; : &quot;其他&quot;
+            }
+        ]
+    }
+}
+
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="核心代码">核心代码</h3>
+<ul>
+<li>
+<p>出于方便我直接吧json放到本地assets下</p>
+<ul>
+<li>
+<p>Model</p>
+<pre><code class="language-java">//定义枚举,目前有4种类型.
+    public enum TYPE {
+        TEXT,
+        IMAGE,
+        GIF,
+        VIDEO
+    }
+    private String type;
+    private String value;
+    private float width;
+    private float height;
+    private float x;
+    private float y;
+    private float font;
+    private String background;
+//这里省略了get.set
+</code></pre>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Activity#onCreate()</p>
+<pre><code class="language-java"> @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mFrameLayout = (FrameLayout) findViewById(R.id.activity_main);
+
+        String s = readFile(&quot;sample.json&quot;, this);
+        String data = JSON.parseObject(s).getString(&quot;data&quot;);
+        mDataModel = JSON.parseObject(data, DataBean.class);
+        if (mDataModel == null) {
+            Log.e(&quot;zyk&quot;, &quot;parse,error&quot;);
+            return;
+        }
+        Log.d(&quot;zyk&quot;, mDataModel.toString());
+
+        //create the dynamicView
+        mFrameLayout.post(new Runnable() {
+          //这里post是为了在DynamicView中拿到mFrameLayout的宽高信息,
+          //因为在Activity中的onCreate()方法中传的,你懂得😏
+            @Override
+            public void run() {
+                View view = DynamicView.createView(MainActivity.this, mDataModel, mFrameLayout);//核心代码
+                if (view == null) {
+                    return;
+                }
+                //add Layout Parameters in just created view
+                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                view.setLayoutParams(layoutParams);
+                //add view to Activity'layout
+                mFrameLayout.addView(view);
+            }
+        });
+    }
+</code></pre>
+</li>
+<li>
+<p>DynamicView</p>
+</li>
+</ul>
+<pre><code class="language-java">//拿到屏幕的宽高信息
+               sWidthPixels = DensityUtil.getDevicesWidthPixels(context);
+               sHeightPixels = DensityUtil.getDevicesHeightPixels(context);
+               Log.d(&quot;zyk&quot;, &quot;宽:&quot; + sWidthPixels + &quot;,&quot;+ &quot;高&quot; + sHeightPixels + &quot;,&quot;
+ + &quot;密度&quot; + DensityUtil.getDensityDpi(context));
+</code></pre>
+<pre><code class="language-java">
+//根据model数据计算出宽高
+int x = (int) (data.getX() / cols) * parent.getWidth();
+int y = (int) (data.getY() / rows) * parent.getHeight();
+int width = (int) ((data.getWidth() / cols) * parent.getWidth());
+int height = (int)((data.getHeight() / rows) * parent.getHeight());
+</code></pre>
+<pre><code class="language-java">//根据计算出的宽高和type,创建view
+switch (data.getType()) {
+            case TEXT:
+                TextView textView = new TextView(context);
+                textView.setX(x);//起始点坐标
+                textView.setY(y);
+                textView.setWidth(width);//宽高信息
+                textView.setHeight(height);
+                if (data.getValue() != null) {
+                    textView.setText(data.getValue());//设置值
+                }
+                if (data.getFont() &gt; 0) {
+                    textView.setTextSize(data.getFont());//字体大小
+                }
+                if (data.getBackground() != null) {//背景颜色
+                    textView.setBackgroundColor(Color.parseColor(data.getBackground()));
+                }
+    			....一些其他待补充属性
+                view = textView;//待会返回这个view
+                break;
+            case IMAGE:
+                ImageView imageView = new ImageView(context);
+    			//下面的代码很挫,应该有更好的实现方式
+                imageView.setX(x);
+                imageView.setY(y);
+                imageView.setMaxWidth(width);
+                imageView.setMaxHeight(height);
+                imageView.setAdjustViewBounds(true); 
+                Glide.with(context).load(url).into(imageview);
+                view = imageView;
+                break;
+            case GIF://gif要支持一些其他的特殊业务属性
+    			.........
+    
+</code></pre>
+<p>以上就是一些核心的代码.</p>
+<ol>
+<li>主要在Activity的第20行.把view的创建交给DynamicView这个类处理,并把data数据和这个动态view的parent传递.</li>
+<li>获取屏幕的宽高信息,获取parent的LayoutParams</li>
+<li>根据data里面的数据按比例计算出真实的宽高信息和view坐上角坐标</li>
+<li>根据model中定义的枚举type new 出具体的view并设置相应的宽高信息,及其属性.perfect~</li>
+</ol>
+<h3 id="待处理正在做的功能_">待处理/正在做的功能(╯﹏╰)</h3>
+<ul>
+<li>单个子视图view的展示属性细节完善</li>
+<li>逻辑事件处理
+<ul>
+<li>点击</li>
+<li>图片是否支持手势缩放,图片圆角的处理</li>
+</ul>
+</li>
+<li>布局都有padding, 将padding纳入坐标系划分将会增加坐标系复杂度
+<ul>
+<li>通过给容器view以及子视图view增加&quot;padding&quot;字段, 控制位置大小微调, 可以较少坐标划分的复杂度</li>
+<li><code>&quot;padding&quot; : [上, 右, 下, 左]</code></li>
+</ul>
+</li>
+<li>其他....(老大一直在强调做计划要量化,这个词以后是不敢用了)</li>
+<li>合并成一个单独的库,方便外部调用</li>
+</ul>
+<blockquote>
+<p>Demo目前已经完成.思路思想是最重要的.这种方案是可行的,同时支持iOS和Android.iOS那哥们还在埋头吭哧吭哧搞事情.他已经做到比我要细花很多.当然肯定会有更好的实现方式,在此仅仅是抛船引欲.(水手,快上船,船长已经迫不及待了~)</p>
+<p>马上要过年了,2018年新年快乐哟,mua~</p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://windherd.github.io//post/annotation">
+              <h3 class="post-title">
+                注解
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c3a23f028ffa157f67f9',
+    clientSecret: 'd9b1f603641c849e309d3273da20035201edbb32',
+    repo: 'windherd.github.io',
+    owner: 'windherd',
+    admin: ['windherd'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | 
+  <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

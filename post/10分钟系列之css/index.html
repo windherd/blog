@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | 风中追风</title>
+<title>10分钟系列之css | 风中追风</title>
 <link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560848357169">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -78,44 +78,126 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              10分钟系列之css
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2018-12-12 ·
+                · 2018-07-13 ·
               </time>
               
-                <a href="https://windherd.github.io//tag/gridea" class="post-tag">
-                  # Gridea
+                <a href="https://windherd.github.io//tag/code" class="post-tag">
+                  # code
                 </a>
               
             </div>
             
-              <div class="post-feature-image" style="background-image: url('https://windherd.github.io//post-images/hello-gridea.png')">
-              </div>
-            
             <div class="post-content">
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <h1 id="一-css简介">一. CSS简介</h1>
+<ul>
+<li>CSS 指层叠样式表 (Cascading Style Sheets)</li>
+<li>样式定义如何显示 HTML 元素,更好的修饰html</li>
+<li>多种样式共同作用于一个标签</li>
+<li>了解决内容与表现分离的问题</li>
+</ul>
+<!--more-->
+<h1 id="二-css基础语法">二. CSS基础语法</h1>
+<pre><code class="language-css">选择器名称 {属性名1:属性值1; 属性名2:属性值2;... }
+</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/3169108-8a7b74767c849112.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/349" alt=""></p>
+<ul>
+<li>
+<p>如果值为若干单词，则要给值加引号：</p>
+<p><code>p {font-family: &quot;sans serif&quot;;}</code></p>
+</li>
+</ul>
+<h1 id="三css选择器">三.CSS选择器</h1>
+<ul>
+<li>
+<p>选择器的分类</p>
+<ul>
+<li>类选择器
+<ul>
+<li><code>.类名{ color:red;...}</code></li>
+</ul>
+</li>
+<li>id选择器
+<ul>
+<li><code>#id名{color:red;...}</code></li>
+</ul>
+</li>
+<li>元素选择器
+<ul>
+<li><code>标签名{color:red;...}</code></li>
+</ul>
+</li>
+<li>伪元素选择器
+<ul>
+<li><code>标签名:link{ color:red;...}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>选择器 组合</p>
+<pre><code class="language-css">h1,h2,h3,h4,h5,h6 {
+  color: green;
+  }
+</code></pre>
+</li>
+<li>
+<p>选择器 关系</p>
+<p>{</p>
+<pre><code class="language-css">li strong {
+    font-style: italic;
+    font-weight: normal;
+  }
+&lt;p&gt;&lt;strong&gt;我是粗体字，不是斜体字，因为我不在列表当中，所以这个规则对我不起作用&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;我是斜体字。这是因为 strong 元素位于 li 元素内。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;我是正常的字体。&lt;/li&gt;
+&lt;/ol&gt; 
+</code></pre>
+<p>}</p>
+<h1 id="四csss与html的结合方式">四.CSSS与HTML的结合方式</h1>
+<ol>
+<li>内部样式
+<ol>
+<li>style属性方式<code>&lt;font style=&quot;font-size:150;color:red&quot;&gt;爱好&lt;/font&gt;</code></li>
+<li>style标签方式<code>&lt;style&gt;&lt;/style&gt;</code> 放在head标签中</li>
+</ol>
+</li>
+<li>外部样式
+<ol>
+<li>导入方式<code>@import url=(&quot;xxx.css&quot;)</code></li>
+<li>链接方式<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;xxx.css&quot;&gt;&lt;/link&gt;</code></li>
+</ol>
+</li>
+</ol>
+<h1 id="五-css常用布局">五. CSS常用布局</h1>
+<ol>
+<li>盒子模型
+<ul>
+<li>border 设置盒子边框</li>
+<li>padding 内边距 元素在盒子中的位置</li>
+<li>margin 外边距 盒子的位置</li>
+</ul>
+</li>
+<li>浮动属性
+<ul>
+<li>float</li>
+</ul>
+</li>
+<li>定位属性 position
+<ul>
+<li>position:static</li>
+<li>position:fixed</li>
+<li>position:relative</li>
+<li>position:absolute</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 
             </div>
           </article>
@@ -124,9 +206,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://windherd.github.io//post/广告名词解释">
+            <a href="https://windherd.github.io//post/10分钟系列之html">
               <h3 class="post-title">
-                广告名词解释
+                10分钟系列之html
               </h3>
             </a>
           </div>

@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 风中追风</title>
+<title>git常用操作 | 风中追风</title>
 <link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560848357169">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -78,22 +78,134 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              git常用操作
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2017-01-19 ·
               </time>
+              
+                <a href="https://windherd.github.io//tag/code" class="post-tag">
+                  # code
+                </a>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <blockquote>
+<p>记录一些git常用操作</p>
+</blockquote>
+<!--more-->
+<ul>
+<li>git init 初始化git仓库</li>
+<li>git add 添加到暂存区</li>
+<li>git commit -m  提交</li>
+<li>git status 当前git库的状态</li>
+<li>git diff 比较</li>
+<li>git log —pretty=oneline git提交记录</li>
+<li>git reset —hard HEAD^ 回退版本</li>
+<li>git reflog git 操作记录</li>
+<li>git diff HEAD — readme.txt 比较工作区和版本库的差异</li>
+<li>git checkout — readme.txt恢复工作区到最近一次<code>git commit</code>或<code>git add</code>时的状态(用版本库里的版本替换工作区的版本)</li>
+</ul>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com
+</code></pre>
+<ul>
+<li>git remote add origin git@github.com:windherd/learngit.git</li>
+<li>git push -u origin master 推送并关联(下次推送不用-u)</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>git clone git@github.com:windherd/gitskills.git克隆代码</p>
+</li>
+<li>
+<p>git checkout -b dev 创建并切换分支=git branch dev +git checkout dev</p>
+</li>
+<li>
+<p>git branch查看当前分支</p>
+</li>
+<li>
+<p>git branch dev创建分支</p>
+</li>
+<li>
+<p>git checkout master切换分支</p>
+</li>
+<li>
+<p>git merge dev 把dev合到当前分支</p>
+</li>
+<li>
+<p>git merge —no—ff -m &quot;merge bugfix101&quot; issue-101</p>
+</li>
+<li>
+<p>git branch -d dev 删除dev分支</p>
+</li>
+<li>
+<p>git log --graph查看分支合并图</p>
+</li>
+<li>
+<p>git stash 保存现场</p>
+</li>
+<li>
+<p>git stash list  查看保存stash的记录</p>
+</li>
+<li>
+<p>git stash apply stash@{0} 恢复指定的stash</p>
+</li>
+<li>
+<p>git stash drop 删除stash</p>
+</li>
+<li>
+<p>git stash pop 恢复并删除</p>
+</li>
+<li>
+<p>git branch -D branch feature-valcan 强制删除一个没有被合并过的分支</p>
+</li>
+<li>
+<p>git remote 远程库信息</p>
+</li>
+<li>
+<p>git remote -v 远程库详细信息</p>
+</li>
+<li>
+<p>git push origin branch-name</p>
+</li>
+<li>
+<p>git tag v1.0</p>
+</li>
+<li>
+<p>git tag</p>
+</li>
+<li>
+<p>git log --pretty=oneline --abbrev-commit</p>
+</li>
+<li>
+<p>git tag v1.0 6224937</p>
+</li>
+<li>
+<p>git tag -d v1.0</p>
+</li>
+<li>
+<p>git push origin —tags 推送所有本地标签</p>
+</li>
+<li>
+<p>git push origin :refs/tags/v0.9 删除远端标签(先从本地删除后)</p>
+</li>
+</ul>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://windherd.github.io//post/girl">
+              <h3 class="post-title">
+                姑娘,等一下
+              </h3>
+            </a>
+          </div>
         
 
         
