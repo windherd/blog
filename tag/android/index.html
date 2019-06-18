@@ -1,15 +1,18 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>Android | 风中追风</title>
 <meta name="description" content="Maintain curiosity, to maintain pure heart.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560848744089">
+<link rel="shortcut icon" href="https://windherd.github.io//favicon.ico?v=1560850003468">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://windherd.github.io//styles/main.css">
 
@@ -18,109 +21,107 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
 
 
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://windherd.github.io/">
-        <img src="https://windherd.github.io//images/avatar.png?v=1560848744089" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://windherd.github.io/">
+        <img class="avatar" src="https://windherd.github.io//images/avatar.png?v=1560850003468" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://windherd.github.io/">
         <h1 class="site-title">风中追风</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      Maintain curiosity, to maintain pure heart.
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Android</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://windherd.github.io//post/Androidstudio遇到的问题">
-                  <h2 class="post-title">AndroidStudio使用问题</h2>
-                </a>
-                <div class="post-date">
-                  2018-07-18
-                </div>
-                <div class="post-abstract">
-                  <ul>
+      <div class="content-container">
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> Android
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://windherd.github.io//post/Androidstudio遇到的问题">
+        <h2 class="post-title">AndroidStudio使用问题</h2>
+      </a>
+      <div class="post-abstract">
+        <ul>
 <li>不能构造apk</li>
 </ul>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://windherd.github.io//post/10分钟系列之kotlin">
-                  <h2 class="post-title">10分钟系列之kotlin</h2>
-                </a>
-                <div class="post-date">
-                  2018-07-11
-                </div>
-                <div class="post-abstract">
-                  <h2 id="基础语法">基础语法</h2>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2018-07-18</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://windherd.github.io//tag/android">
+                Android
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://windherd.github.io//post/10分钟系列之kotlin">
+        <h2 class="post-title">10分钟系列之kotlin</h2>
+      </a>
+      <div class="post-abstract">
+        <h2 id="基础语法">基础语法</h2>
 <ul>
 <li>函数定义使用关键字 fun，参数格式为：参数 : 类型</li>
 <li>表达式作为函数体，返回类型自动推断：</li>
@@ -128,77 +129,139 @@
 <li>可变变量定义：var 关键字 . 不可变变量定义：val 关键字，只能赋值一次的变量(类似Java中final修饰的变量)</li>
 </ul>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://windherd.github.io//post/toued">
-                  <h2 class="post-title">Android尺寸怎么标</h2>
-                </a>
-                <div class="post-date">
-                  2017-02-15
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://windherd.github.io//post/DynamicView">
-                  <h2 class="post-title">Android动态布局实现思路</h2>
-                </a>
-                <div class="post-date">
-                  2017-01-22
-                </div>
-                <div class="post-abstract">
-                  <blockquote>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2018-07-11</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://windherd.github.io//tag/android">
+                Android
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://windherd.github.io//post/toued">
+        <h2 class="post-title">Android尺寸怎么标</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2017-02-15</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://windherd.github.io//tag/android">
+                Android
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://windherd.github.io//post/DynamicView">
+        <h2 class="post-title">Android动态布局实现思路</h2>
+      </a>
+      <div class="post-abstract">
+        <blockquote>
 <p>提供一种简单实现动态布局的思路,即每次布局页面发生变化,前端不用更新版本,让后端来控制布局的展示效果</p>
 <p>大概1周的时间,终于完成了思路设计到Demo的实现</p>
 </blockquote>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://windherd.github.io//post/annotation">
-                  <h2 class="post-title">注解</h2>
-                </a>
-                <div class="post-date">
-                  2017-01-19
-                </div>
-                <div class="post-abstract">
-                  <p>1.使用IntDef代替枚举</p>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2017-01-22</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://windherd.github.io//tag/android">
+                Android
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://windherd.github.io//post/annotation">
+        <h2 class="post-title">注解</h2>
+      </a>
+      <div class="post-abstract">
+        <p>1.使用IntDef代替枚举</p>
 <p>枚举一直不被Android中推荐使用.因为枚举中的每一个值在枚举类中都是一个对象.使用枚举值会比整型消耗的更多的内存.但有时我们又要限制取某些特定的值.intDef和StringDef两个魔术变量注解来替换枚举.厉害了,我的哥.</p>
 
-                </div>
-              </div>
-              
-            </article>
-          
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2017-01-19</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://windherd.github.io//tag/android">
+                Android
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
 
-          <div class="pagination-container">
+
+<div class="pagination-container">
   
   
 </div>
 
-        </div>
+
       </div>
+
+      <div class="site-footer">
+  <div class="slogan">Maintain curiosity, to maintain pure heart.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/windherd" target="_blank">windherd</a> | <a class="rss" href="https://windherd.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
