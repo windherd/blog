@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://windherd.github.io/</id>
     <title>风中追风</title>
-    <updated>2019-06-18T09:26:47.927Z</updated>
+    <updated>2019-06-18T09:28:36.037Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://windherd.github.io/"/>
     <link rel="self" href="https://windherd.github.io//atom.xml"/>
@@ -11,35 +11,12 @@
     <icon>https://windherd.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 风中追风</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://windherd.github.io//post/hello-gridea</id>
-        <link href="https://windherd.github.io//post/hello-gridea">
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://windherd.github.io//post/about</id>
+        <link href="https://windherd.github.io//post/about">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<p>阳光沙滩仙人掌, 还有我的素梅酱</p>
 ]]></content>
     </entry>
     <entry>
@@ -265,6 +242,50 @@
         </link>
         <updated>2018-07-12T02:25:44.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1ftbk5rry1jj31iu2qx7ku.jpg" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你有什么道理后悔没有早点知道]]></title>
+        <id>https://windherd.github.io//post/你有什么道理后悔没有早点知道</id>
+        <link href="https://windherd.github.io//post/你有什么道理后悔没有早点知道">
+        </link>
+        <updated>2018-07-11T10:26:15.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
+<ul>
+<li>第一个道理其实是悖论，就是无论我告诉你什么道理，当你的心智没有达到这个境界或接近的水平时或经
+过一些事情的时候，你是不会理解这个道理的。或者你以为你知道这个道理，其实你不知道。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
+<ul>
+<li>
+<p>第一个道理其实是悖论，就是无论我告诉你什么道理，当你的心智没有达到这个境界或接近的水平时或经
+过一些事情的时候，你是不会理解这个道理的。或者你以为你知道这个道理，其实你不知道。</p>
+<!-- more -->
+</li>
+<li>
+<p>第二个很重要的道理是，除了自身的病患或亲友离去的痛苦是真实的，其他的痛苦都是你自己的价值观带给你的。</p>
+</li>
+<li>
+<p>第三个道理是与第二个有关联的，就是别人指责你的事情或批评的你的理由，往往最能伤害你的，是那些你也这样认为的事情。</p>
+</li>
+<li>
+<p>第四个道理是其实人跟人之间差别其实不大，所以不要与别人去比较，人生就是一场长跑，你可能不会是第一名，但也不不太会是最后一名，和前面比你会有动力，和后面比你会有幸福。但重要的是享受过程。</p>
+</li>
+<li>
+<p>第五个道理是永远不要与人去辩论，你也很难把别人辩服，因为立场不同，因为没有对错，只有规则，只有利益。人生就是一场游戏，懂得你在玩的游戏的游戏规则，然后玩好它。
+前面五个道理如果你真理解，你会觉得所谓别人的眼光，世俗的看法都不再那么重要，你内心的感觉，你的 时间才最重要</p>
+</li>
+<li>
+<p>第六个道理是人身体的很多器官的受伤是超过一个界限之后不可逆的，比如眼睛过了假性就是真性近视，牙齿牙龈炎症过长一定会让你牙疼并拔牙的，脂肪肝时间过长就是肝硬化，而这些疾病的初期都是可逆的。</p>
+</li>
+<li>
+<p>第七个的道理是生活其实是一种运营，时间是你最宝贵的资源，还有钱，关系，都是你的一种投入，自己重视什么，事业，友谊，家庭上，就多投入些，种瓜得瓜，好好平衡各个关系是你要做好的。</p>
+</li>
+<li>
+<p>第八个道理是要感恩这个世界。如果觉得有触动就应该表达出来。</p>
+</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
@@ -783,50 +804,6 @@ fun main(args: Array&lt;String&gt;) {
     Derived(b).print() // 输出 10
 }
 </code></pre>
-</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你有什么道理后悔没有早点知道]]></title>
-        <id>https://windherd.github.io//post/你有什么道理后悔没有早点知道</id>
-        <link href="https://windherd.github.io//post/你有什么道理后悔没有早点知道">
-        </link>
-        <updated>2018-07-11T10:26:15.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
-<ul>
-<li>第一个道理其实是悖论，就是无论我告诉你什么道理，当你的心智没有达到这个境界或接近的水平时或经
-过一些事情的时候，你是不会理解这个道理的。或者你以为你知道这个道理，其实你不知道。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="你有什么道理后悔没有早点知道">你有什么道理后悔没有早点知道</h1>
-<ul>
-<li>
-<p>第一个道理其实是悖论，就是无论我告诉你什么道理，当你的心智没有达到这个境界或接近的水平时或经
-过一些事情的时候，你是不会理解这个道理的。或者你以为你知道这个道理，其实你不知道。</p>
-<!-- more -->
-</li>
-<li>
-<p>第二个很重要的道理是，除了自身的病患或亲友离去的痛苦是真实的，其他的痛苦都是你自己的价值观带给你的。</p>
-</li>
-<li>
-<p>第三个道理是与第二个有关联的，就是别人指责你的事情或批评的你的理由，往往最能伤害你的，是那些你也这样认为的事情。</p>
-</li>
-<li>
-<p>第四个道理是其实人跟人之间差别其实不大，所以不要与别人去比较，人生就是一场长跑，你可能不会是第一名，但也不不太会是最后一名，和前面比你会有动力，和后面比你会有幸福。但重要的是享受过程。</p>
-</li>
-<li>
-<p>第五个道理是永远不要与人去辩论，你也很难把别人辩服，因为立场不同，因为没有对错，只有规则，只有利益。人生就是一场游戏，懂得你在玩的游戏的游戏规则，然后玩好它。
-前面五个道理如果你真理解，你会觉得所谓别人的眼光，世俗的看法都不再那么重要，你内心的感觉，你的 时间才最重要</p>
-</li>
-<li>
-<p>第六个道理是人身体的很多器官的受伤是超过一个界限之后不可逆的，比如眼睛过了假性就是真性近视，牙齿牙龈炎症过长一定会让你牙疼并拔牙的，脂肪肝时间过长就是肝硬化，而这些疾病的初期都是可逆的。</p>
-</li>
-<li>
-<p>第七个的道理是生活其实是一种运营，时间是你最宝贵的资源，还有钱，关系，都是你的一种投入，自己重视什么，事业，友谊，家庭上，就多投入些，种瓜得瓜，好好平衡各个关系是你要做好的。</p>
-</li>
-<li>
-<p>第八个道理是要感恩这个世界。如果觉得有触动就应该表达出来。</p>
 </li>
 </ul>
 ]]></content>
