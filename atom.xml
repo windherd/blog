@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://windherd.github.io/</id>
     <title>风中追风</title>
-    <updated>2019-06-18T09:40:51.593Z</updated>
+    <updated>2019-06-18T09:45:56.409Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://windherd.github.io/"/>
     <link rel="self" href="https://windherd.github.io//atom.xml"/>
@@ -18,12 +18,11 @@
         <updated>2018-11-13T04:25:44.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="1-基本名词"><strong>1. 基本名词</strong></h3>
 <p><strong>CTR（Click Through Rate）</strong>：点击率，衡量线上广告效果的重要因素，等于广告点击数量与广告展现数量的比率，CTR越高，即点击广告的比率越高，广告效果越好。</p>
-<p><strong>CVR（Conversation Rate）</strong>：转化率，等于转化次数与到达次数的比率。这里的到达指用户点击进入广告主页面；转化指广告主所期望用户最终实现的行为，如购买、拨打电话等。转化率是效果广告最重要的指标之一。</p>
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="1-基本名词"><strong>1. 基本名词</strong></h3>
 <p><strong>CTR（Click Through Rate）</strong>：点击率，衡量线上广告效果的重要因素，等于广告点击数量与广告展现数量的比率，CTR越高，即点击广告的比率越高，广告效果越好。</p>
-<p><strong>CVR（Conversation Rate）</strong>：转化率，等于转化次数与到达次数的比率。这里的到达指用户点击进入广告主页面；转化指广告主所期望用户最终实现的行为，如购买、拨打电话等。转化率是效果广告最重要的指标之一。</p>
 <!--more-->
+<p><strong>CVR（Conversation Rate）</strong>：转化率，等于转化次数与到达次数的比率。这里的到达指用户点击进入广告主页面；转化指广告主所期望用户最终实现的行为，如购买、拨打电话等。转化率是效果广告最重要的指标之一。</p>
 <p><strong>DSP（Demand-side Platform）</strong>：购买广告的产品形态，为需求方（即广告主或代理商）提供实时竞价投放平台， 需求方可以在平台上管理广告活动及投放策略， 包括设置目标受众的定向条件、预算、出价、创意等，帮助广告主在互联网或者移动互联网上进行广告投放。</p>
 <p><strong>DSPAN（DSP+Ad Network）</strong>：扩展型DSP。DSP+网络媒体的混合体，将成熟的DSP模式与Ad Network模式相结合，不仅支持RTB实时竞价，同时支持PMP私有交易，为广告主提供了更完善的程序化广告解决方案。</p>
 <p><strong>DMP（Data Management Platform）</strong>：数据管理平台。专门进行广告数据收集与加工的平台，可以为广告主提供多元化的数据管理服务。</p>
